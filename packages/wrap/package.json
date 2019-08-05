@@ -19,6 +19,11 @@
     "prepublish": "npm run clean && npm run lint && npm run test && npm run build",
     "release": "release-it"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/express-knex/express-knex.git",
+    "directory": "packagess/wrap"
+  },
   "files": [
     "lib",
     "src"
