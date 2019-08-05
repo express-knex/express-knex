@@ -23,6 +23,9 @@
     "url": "https://github.com/express-knex/express-knex.git",
     "directory": "packagess/mailer"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "Express",
     "Knex",
@@ -61,5 +64,6 @@
     "mocha": "^6.2.0",
     "nyc": "^14.1.1",
     "rimraf": "^2.6.3"
-  }
+  },
+  "gitHead": "9a31a77b0e3b6b1ae50128f85db3e6ae28261e8f"
 }
