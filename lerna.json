@@ -1,0 +1,8 @@
+{
+  "version": "independent",
+  "command": {
+    "publish": {
+      "conventionalCommits": true
+    }
+  }
+}
