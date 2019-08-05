@@ -1,4 +1,4 @@
-import KnexStorage from 'express-knex-storage'
+import KnexStorage from '@express-knex/storage'
 import Knex from 'knex'
 
 export default (app) => {
