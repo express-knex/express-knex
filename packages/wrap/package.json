@@ -3,6 +3,9 @@
   "version": "0.1.9",
   "description": "Wrapper for async router function for Express-Knex project",
   "main": "./lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "clean": "rimraf lib",
     "test": "npm run lint && npm run cover",
@@ -46,5 +49,5 @@
     "nyc": "^14.1.1",
     "rimraf": "^2.6.3"
   },
-  "gitHead": "bc2620e8a789a67fb84e9fa74d7b8ea9d60bc62c"
+  "gitHead": "a7c5aa503ae9672ec4643aa9c6d9b082f95c2baa"
 }
