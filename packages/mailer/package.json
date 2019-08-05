@@ -1,6 +1,6 @@
 {
   "name": "@express-knex/mailer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Express Knex project, mailer based on Sendgrid and Marked",
   "main": "lib/index.js",
   "scripts": {
