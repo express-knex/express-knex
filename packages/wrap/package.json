@@ -1,6 +1,6 @@
 {
   "name": "@express-knex/wrap",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Wrapper for async router function for Express-Knex project",
   "main": "./lib/index.js",
   "publishConfig": {

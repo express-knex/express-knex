@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.10](https://github.com/express-knex/express-knex/compare/@express-knex/wrap@0.1.9...@express-knex/wrap@0.1.10) (2019-08-05)
+
+
+### Bug Fixes
+
+* fix for publishing config ([914ae41](https://github.com/express-knex/express-knex/commit/914ae41))
+
+
+
+
+
 ## [0.1.9](https://github.com/express-knex/express-knex/compare/@express-knex/wrap@0.1.8...@express-knex/wrap@0.1.9) (2019-08-05)
 
 
