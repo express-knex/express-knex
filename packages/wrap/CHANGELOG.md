@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.8](https://github.com/express-knex/express-knex/compare/@express-knex/wrap@0.1.6...@express-knex/wrap@0.1.8) (2019-08-05)
+
+
+### Bug Fixes
+
+* **wrap:** different fixes ([6a5b0b2](https://github.com/express-knex/express-knex/commit/6a5b0b2))
+* **wrap:** different fixes ([06c3906](https://github.com/express-knex/express-knex/commit/06c3906))
+
+
+
+
+
 ## [0.1.7](https://github.com/express-knex/express-knex/compare/@express-knex/wrap@0.1.6...@express-knex/wrap@0.1.7) (2019-08-05)
 
 
