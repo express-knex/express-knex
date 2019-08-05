@@ -2,9 +2,7 @@
   "name": "express-knex",
   "version": "0.2.0",
   "private": false,
-  "scripts": {
-    "commitmsg": "commitlint -e $GIT_PARAMS"
-  },
+  "scripts": {},
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
@@ -16,11 +14,15 @@
     "type": "git",
     "url": "https://github.com/express-knex/express-knex.git"
   },
-
   "commitlint": {
     "extends": [
       "@commitlint/config-lerna-scopes",
       "@commitlint/config-conventional"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
   }
 }
