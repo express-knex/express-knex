@@ -1,29 +1,57 @@
 {
-  "name": "express-knex",
-  "version": "0.2.0",
-  "private": false,
-  "scripts": {},
-  "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
-    "husky": "^3.0.2",
-    "lerna": "^3.16.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/express-knex/express-knex.git"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  }
+	"name": "express-knex",
+	"version": "0.2.0",
+	"private": false,
+	"devDependencies": {
+		"@commitlint/cli": "^8.1.0",
+		"@commitlint/config-conventional": "^8.1.0",
+		"husky": "^3.0.2",
+		"lerna": "^3.16.4"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/express-knex/express-knex.git"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+		}
+	},
+	"dependencies": {
+		"@babel/cli": "^7.5.5",
+		"@babel/core": "^7.5.5",
+		"@babel/polyfill": "^7.4.4",
+		"@babel/preset-env": "^7.5.5",
+		"@babel/register": "^7.5.5",
+		"@sendgrid/mail": "^6.4.0",
+		"babel-eslint": "^10.0.2",
+		"babel-plugin-add-module-exports": "^1.0.2",
+		"babel-preset-minify": "^0.5.0",
+		"chai": "^4.2.0",
+		"cross-env": "^5.2.0",
+		"dirty-chai": "^2.0.1",
+		"eslint": "^6.1.0",
+		"eslint-config-standard": "^13.0.1",
+		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-node": "^9.1.0",
+		"eslint-plugin-promise": "^4.2.1",
+		"eslint-plugin-react": "^7.14.3",
+		"eslint-plugin-standard": "^4.0.0",
+		"knex": "^0.19.1",
+		"lodash": "^4.17.15",
+		"marked": "^0.7.0",
+		"mocha": "^6.2.0",
+		"moment": "^2.24.0",
+		"nyc": "^14.1.1",
+		"rimraf": "^2.6.3"
+	}
 }
