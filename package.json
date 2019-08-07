@@ -53,5 +53,9 @@
 		"moment": "^2.24.0",
 		"nyc": "^14.1.1",
 		"rimraf": "^2.6.3"
+	},
+	"scripts": {
+		"bootstrap": "npx lerna bootstrap --hoist",
+		"publish": "npx lerna publish --yes"
 	}
 }
