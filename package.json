@@ -55,6 +55,7 @@
 		"rimraf": "^2.6.3"
 	},
 	"scripts": {
-		"bootstrap": "lerna bootstrap --hoist"
+		"bootstrap": "npx lerna bootstrap --hoist",
+		"publish": "npx lerna publish --yes"
 	}
 }
