@@ -1,6 +1,6 @@
 {
   "name": "@express-knex/error",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Express-Knex project, common Error classes",
   "main": "./lib/index.js",
   "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/error",
