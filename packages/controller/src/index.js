@@ -1,6 +1,12 @@
-import { ServerError, ServerGenericError, ServerInvalidParameters, ServerNotFound } from './errors'
-
 export default (app) => {
+  if (!app.errors) {
+    throw Error('Controller package expect app.errors to be mounted with proper error classes')
+  }
+  if (!app.errors.ServerError || !app.errors.ServerGenericError ||
+    !app.errors.ServerInvalidParameters || !app.errors.ServerNotFound) {
+    throw Error('Controller package can not find expected error classes at app.errors')
+  }
+
   const Controller = {
     list: (Model) => (req, res) => {
       return Promise.all([Model.findAll(), Model.count()])
@@ -22,11 +28,11 @@ export default (app) => {
           return foundData
         })
         .catch((error) => {
-          if (error instanceof ServerError) {
+          if (error instanceof app.errors.ServerError) {
             throw error
           } else {
             console.log(error)
-            throw new ServerGenericError(error)
+            throw new app.errors.ServerGenericError(error)
           }
         })
     },
@@ -38,10 +44,10 @@ export default (app) => {
           return item
         })
         .catch((error) => {
-          if (error instanceof ServerError) {
+          if (error instanceof app.errors.ServerError) {
             throw error
           } else {
-            throw new ServerGenericError(error)
+            throw new app.errors.ServerGenericError(error)
           }
         })
     },
@@ -50,16 +56,16 @@ export default (app) => {
       return Model.findById(req.params.id)
         .then((foundData) => {
           if (!foundData) {
-            throw ServerNotFound(Model.name, req.params.id, `${Model.name} with id ${req.params.id} not found`)
+            throw app.errors.ServerNotFound(Model.name, req.params.id, `${Model.name} with id ${req.params.id} not found`)
           }
           res.json(foundData)
           return foundData
         })
         .catch((error) => {
-          if (error instanceof ServerError) {
+          if (error instanceof app.errors.ServerError) {
             throw error
           } else {
-            throw new ServerGenericError(error)
+            throw new app.errors.ServerGenericError(error)
           }
         })
     },
@@ -76,10 +82,10 @@ export default (app) => {
           return foundData
         })
         .catch((error) => {
-          if (error instanceof ServerError) {
+          if (error instanceof app.errors.ServerError) {
             throw error
           } else {
-            throw new ServerGenericError(error)
+            throw new app.errors.ServerGenericError(error)
           }
         })
     },
@@ -91,7 +97,7 @@ export default (app) => {
             res.json(foundData)
             return foundData
           }
-          throw new ServerNotFound(Model.name, req.params.id, `${Model.name} with id ${req.params.id} not found`)
+          throw new app.errors.ServerNotFound(Model.name, req.params.id, `${Model.name} with id ${req.params.id} not found`)
         })
     },
 
@@ -104,7 +110,7 @@ export default (app) => {
       req.qs = JSON.parse(req.query.filter)
       // console.log(req.qs)
       if (!(req.qs && req.qs.ids)) {
-        throw new ServerInvalidParameters(
+        throw new app.errors.ServerInvalidParameters(
           'filter', 'query parameter',
           'filter query parameter should exists and have ids property')
       }
@@ -114,13 +120,13 @@ export default (app) => {
             res.json(foundData)
             return foundData
           }
-          throw new ServerError('Not found - ids')
+          throw new app.errors.ServerError('Not found - ids')
         })
         .catch((error) => {
-          if (error instanceof ServerError) {
+          if (error instanceof app.errors.ServerError) {
             throw error
           } else {
-            throw new ServerGenericError(error)
+            throw new app.errors.ServerGenericError(error)
           }
         })
     }

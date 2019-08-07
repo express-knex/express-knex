@@ -1,12 +1,13 @@
 import chai, { expect } from 'chai'
 import dirtyChai from 'dirty-chai'
 import Controller from '../src'
-
+import Errors from '@express-knex/error'
 chai.use(dirtyChai)
 
 describe('Controller package test', () => {
   it('Property test', () => {
     const app = { env: {} }
+    app.errors = Errors(app)
     app.controller = Controller(app)
     expect(app.controller).to.not.undefined()
     expect(app.controller).to.not.null()
