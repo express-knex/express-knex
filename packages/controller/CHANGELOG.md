@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/express-knex/express-knex/tree/master/packages/controller/compare/@express-knex/controller@0.1.0...@express-knex/controller@0.1.1) (2019-08-13)
+
+
+### Bug Fixes
+
+* **controller:** use errors package name ([6c08729](https://github.com/express-knex/express-knex/tree/master/packages/controller/commit/6c08729))
+
+
+
+
+
 # [0.1.0](https://github.com/express-knex/express-knex/tree/master/packages/controller/compare/@express-knex/controller@0.0.4...@express-knex/controller@0.1.0) (2019-08-13)
 
 

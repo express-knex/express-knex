@@ -1,6 +1,6 @@
 {
   "name": "@express-knex/errors",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Express-Knex project, Errors",
   "main": "./lib/index.js",
   "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/errors",
