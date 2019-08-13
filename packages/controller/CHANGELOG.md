@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/express-knex/express-knex/tree/master/packages/controller/compare/@express-knex/controller@0.0.4...@express-knex/controller@0.1.0) (2019-08-13)
+
+
+### Features
+
+* **controller:** work with validator ([e736e76](https://github.com/express-knex/express-knex/tree/master/packages/controller/commit/e736e76))
+
+
+
+
+
 ## [0.0.4](https://github.com/express-knex/express-knex/tree/master/packages/controller/compare/@express-knex/controller@0.0.3...@express-knex/controller@0.0.4) (2019-08-07)
 
 **Note:** Version bump only for package @express-knex/controller

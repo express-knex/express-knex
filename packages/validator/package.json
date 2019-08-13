@@ -1,6 +1,6 @@
 {
   "name": "@express-knex/validator",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Express Knex project, Validator",
   "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/validator",
   "main": "lib/index.js",
@@ -36,12 +36,12 @@
     "express-validator": "^6.1.1"
   },
   "devDependencies": {
-    "@express-knex/error": "^0.0.3",
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
+    "@express-knex/error": "^0.0.3",
     "babel-eslint": "^10.0.2",
     "babel-plugin-add-module-exports": "^1.0.2",
     "babel-preset-minify": "^0.5.0",
