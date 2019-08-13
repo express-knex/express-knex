@@ -1,9 +1,9 @@
 {
-  "name": "@express-knex/error",
+  "name": "@express-knex/errors",
   "version": "0.0.3",
-  "description": "Express-Knex project, common Error classes",
+  "description": "Express-Knex project, Errors",
   "main": "./lib/index.js",
-  "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/error",
+  "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/errors",
   "scripts": {
     "clean": "rimraf lib",
     "test": "npm run lint && npm run cover",
@@ -21,7 +21,7 @@
     "src"
   ],
   "repository": {
-    "url": "https://github.com/express-knex/express-knex/tree/master/packages/error"
+    "url": "https://github.com/express-knex/express-knex/tree/master/packages/errors"
   },
   "publishConfig": {
     "access": "public"
