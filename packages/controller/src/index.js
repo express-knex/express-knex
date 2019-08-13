@@ -1,14 +1,22 @@
 export default (app) => {
   if (!app.errors) {
-    throw Error('Controller package expect app.errors to be mounted with proper error classes')
+    throw Error('Controller package: expect app.errors to be mounted with proper error classes')
   }
   if (!app.errors.ServerError || !app.errors.ServerGenericError ||
     !app.errors.ServerInvalidParameters || !app.errors.ServerNotFound) {
     throw Error('Controller package can not find expected error classes at app.errors')
   }
 
+  if (!app.validator) {
+    throw Error('Controller package: expect app.validator to be mounter')
+  }
+  if (!app.validator.validatorFromModel) {
+    throw Error('Controller package: expect app.validator.validatorFromModel')
+  }
+
   const Controller = {
     list: (Model) => (req, res) => {
+      // no params or input objects
       return Promise.all([Model.findAll(), Model.count()])
         .then((data) => {
           const foundData = data[0]
@@ -38,7 +46,12 @@ export default (app) => {
     },
 
     create: (Model) => (req, res) => {
-      return Model.create(req.matchedData)
+      // validate that body have proper object without ID:
+      const validations = app.validator.validatorFromModel(Model)
+
+      // perform create instance:
+      return app.validator.applyValidationsToReq(validations, req)
+        .then(() => Model.create(req.matchedData))
         .then((item) => {
           res.json(item)
           return item
@@ -53,6 +66,8 @@ export default (app) => {
     },
 
     item: (Model) => (req, res) => {
+      // validate that req have id param
+
       return Model.findById(req.params.id)
         .then((foundData) => {
           if (!foundData) {
@@ -71,12 +86,18 @@ export default (app) => {
     },
 
     save: (Model) => (req, res) => {
+      // validate that body have properly shaped object:
+
       // console.log('body:')
       // console.log(req.body)
       // console.log('matchedData:')
       // console.log(req.matchedData)
       req.matchedData.id = req.params.id
-      return Model.update(req.matchedData)
+      const validations = app.validator.validatorFromModel(Model)
+
+      // perform create instance:
+      return app.validator.applyValidationsToReq(validations, req)
+        .then(() => Model.update(req.matchedData))
         .then((foundData) => {
           res.json(foundData)
           return foundData
@@ -91,6 +112,8 @@ export default (app) => {
     },
 
     remove: (Model) => (req, res) => {
+      // check for id:
+
       return Model.removeById(req.params.id)
         .then((foundData) => {
           if (foundData) {
