@@ -1,7 +1,7 @@
 import chai, { expect } from 'chai'
 import dirtyChai from 'dirty-chai'
 import Validator from '../src'
-import Errors from '@express-knex/error'
+import Errors from '@express-knex/errors'
 chai.use(dirtyChai)
 
 describe('Controller package test', () => {
