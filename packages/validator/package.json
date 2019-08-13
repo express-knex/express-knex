@@ -32,7 +32,11 @@
   ],
   "author": "deksden",
   "license": "MIT",
+  "dependencies": {
+    "express-validator": "^6.1.1"
+  },
   "devDependencies": {
+    "@express-knex/error": "^0.0.3",
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/polyfill": "^7.4.4",
