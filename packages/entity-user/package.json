@@ -1,0 +1,61 @@
+{
+  "name": "@express-knex/controller",
+  "version": "0.1.1",
+  "description": "Express Knex project, Controller",
+  "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/controller",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "test": "npm run lint && npm run cover",
+    "test:prod": "cross-env BABEL_ENV=production npm run test",
+    "test:only": "mocha ./test/**/*.js",
+    "test:watch": "npm test -- --watch",
+    "cover": "nyc npm run test:only",
+    "lint": "eslint src test",
+    "build": "cross-env BABEL_ENV=production babel src --out-dir lib",
+    "prepublish": "npm run clean && npm run lint && npm run test && npm run build"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "repository": {
+    "url": "https://github.com/express-knex/express-knex/tree/master/packages/controller"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "Express",
+    "Knex",
+    "controller"
+  ],
+  "author": "deksden",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "@express-knex/errors": "^0.0.4",
+    "@express-knex/validator": "^0.1.1",
+    "babel-eslint": "^10.0.2",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "babel-preset-minify": "^0.5.0",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "dirty-chai": "^2.0.1",
+    "eslint": "^6.1.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
+    "rimraf": "^2.6.3"
+  }
+}
