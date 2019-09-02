@@ -1,8 +1,8 @@
 {
-  "name": "@express-knex/controller",
-  "version": "0.1.1",
-  "description": "Express Knex project, Controller",
-  "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/controller",
+  "name": "@express-knex/entity-user",
+  "version": "0.0.1",
+  "description": "Express Knex project, User entity",
+  "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/entity-user",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib",
@@ -20,7 +20,7 @@
     "src"
   ],
   "repository": {
-    "url": "https://github.com/express-knex/express-knex/tree/master/packages/controller"
+    "url": "https://github.com/express-knex/express-knex/tree/master/packages/entity-user"
   },
   "publishConfig": {
     "access": "public"
@@ -41,6 +41,7 @@
     "@express-knex/validator": "^0.1.1",
     "@express-knex/controller": "^0.1.1",
     "@express-knex/crud-actions": "^0.0.1",
+    "@express-knex/errors": "^0.0.4",
     "babel-eslint": "^10.0.2",
     "babel-plugin-add-module-exports": "^1.0.2",
     "babel-preset-minify": "^0.5.0",

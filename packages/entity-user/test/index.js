@@ -1,13 +1,15 @@
 import chai, { expect } from 'chai'
 import dirtyChai from 'dirty-chai'
 import CrudActions from '../src'
+import Errors from '@express-knex/errors'
 import Validator from '@express-knex/validator'
 import Controller from '@express-knex/controller'
 chai.use(dirtyChai)
 
-describe('Controller package test', () => {
+describe('Entity-user', () => {
   it('Property test', () => {
     const app = { env: {} }
+    app.errors = Errors(app)
     app.validator = Validator(app)
     app.controller = Controller(app)
     app.controller.CrudActions = CrudActions(app)
