@@ -1,6 +1,6 @@
 {
   "name": "@express-knex/entity-user",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Express Knex project, User entity",
   "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/entity-user",
   "main": "lib/index.js",

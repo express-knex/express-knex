@@ -1,6 +1,6 @@
 {
   "name": "@express-knex/crud-actions",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "description": "Express Knex project, CRUD actons",
   "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/crud-actions",
   "main": "lib/index.js",
