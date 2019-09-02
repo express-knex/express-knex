@@ -1,6 +1,7 @@
 import chai, { expect } from 'chai'
 import dirtyChai from 'dirty-chai'
-import CrudActions from '../src'
+import User from '../src'
+import Storage from '@express-knex/storage-sqlite'
 import Errors from '@express-knex/errors'
 import Validator from '@express-knex/validator'
 import Controller from '@express-knex/controller'
@@ -11,8 +12,10 @@ describe('Entity-user', () => {
     const app = { env: {} }
     app.errors = Errors(app)
     app.validator = Validator(app)
+    app.storage = Storage(app)
     app.controller = Controller(app)
-    app.controller.CrudActions = CrudActions(app)
+    app.models = {}
+    app.models.User = User(app)
     expect(app.controller).to.not.undefined()
     expect(app.controller).to.not.null()
     expect(app.controller).to.include.keys(
