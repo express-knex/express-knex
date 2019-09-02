@@ -16,6 +16,6 @@ describe('Crud-actions', () => {
     app.controller.CrudActions = CrudActions(app)
     expect(app.controller).to.not.undefined()
     expect(app.controller).to.not.null()
-    expect(app.controller.CrudActions).to.be.a('array')
+    expect(app.controller.CrudActions).to.be.a('function')
   })
 })
