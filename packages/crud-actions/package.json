@@ -1,8 +1,8 @@
 {
-  "name": "@express-knex/controller",
+  "name": "@express-knex/crud-actions",
   "version": "0.1.1",
-  "description": "Express Knex project, Controller",
-  "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/controller",
+  "description": "Express Knex project, CRUD actons",
+  "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/crud-actions",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib",
@@ -20,7 +20,7 @@
     "src"
   ],
   "repository": {
-    "url": "https://github.com/express-knex/express-knex/tree/master/packages/controller"
+    "url": "https://github.com/express-knex/express-knex/tree/master/packages/crud-actions"
   },
   "publishConfig": {
     "access": "public"
@@ -38,9 +38,8 @@
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
+    "@express-knex/errors": "^0.0.4",
     "@express-knex/validator": "^0.1.1",
-    "@express-knex/controller": "^0.1.1",
-    "@express-knex/crud-actions": "^0.0.1",
     "babel-eslint": "^10.0.2",
     "babel-plugin-add-module-exports": "^1.0.2",
     "babel-preset-minify": "^0.5.0",

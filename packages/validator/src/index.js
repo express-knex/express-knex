@@ -1,4 +1,4 @@
-import { body, validationResult, matchedData } from 'express-validator'
+import { body, param, validationResult, matchedData } from 'express-validator'
 
 export default (app) => {
   if (!app.errors) {
@@ -32,6 +32,9 @@ export default (app) => {
           return req
         })
         .catch((err) => { throw err })
+    },
+    paramId: (Model) => {
+      return param('id').isString().withMessage('Id should be specified in URL')
     }
   }
 
