@@ -1,6 +1,6 @@
 {
   "name": "@express-knex/crud-actions",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Express Knex project, CRUD actons",
   "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/crud-actions",
   "main": "lib/index.js",
@@ -38,7 +38,7 @@
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
-    "@express-knex/controller": "^0.1.6",
+    "@express-knex/controller": "^0.1.7",
     "@express-knex/errors": "^0.0.4",
     "@express-knex/validator": "^0.1.2",
     "babel-eslint": "^10.0.2",
@@ -58,5 +58,6 @@
     "mocha": "^6.2.0",
     "nyc": "^14.1.1",
     "rimraf": "^2.6.3"
-  }
+  },
+  "gitHead": "04eb754f787241ecafba604b6df4458a53b3d9d9"
 }
