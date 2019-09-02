@@ -1,6 +1,6 @@
 import uuid from 'uuid/v4'
 import bcrypt from 'bcrypt'
-import CrudActions from '@express-knex/crud-actions'
+//import CrudActions from '@express-knex/crud-actions'
 
 /* User:
   * id: user identifier, UUID
@@ -89,7 +89,7 @@ export default module.exports = (app) => {
   Model.isPassword = (encodedPassword, password) => bcrypt.compareSync(password, encodedPassword)
 
   // define routes (published methods)
-  Model.actions = CrudActions(Model)
+//  Model.actions = CrudActions(Model)
 
   return Model
 }

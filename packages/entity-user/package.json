@@ -39,7 +39,6 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
     "@express-knex/controller": "^0.1.7",
-    "@express-knex/crud-actions": "^0.0.1",
     "@express-knex/errors": "^0.0.4",
     "@express-knex/validator": "^0.1.2",
     "babel-eslint": "^10.0.2",
