@@ -1,6 +1,6 @@
 {
   "name": "@express-knex/validator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Express Knex project, Validator",
   "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/validator",
   "main": "lib/index.js",
