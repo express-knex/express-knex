@@ -1,6 +1,6 @@
 {
   "name": "@express-knex/crud-actions",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Express Knex project, CRUD actons",
   "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/crud-actions",
   "main": "lib/index.js",
@@ -58,5 +58,6 @@
     "mocha": "^6.2.0",
     "nyc": "^14.1.1",
     "rimraf": "^2.6.3"
-  }
+  },
+  "gitHead": "35fce4cff6ca263294a387ddc780ace9cb186031"
 }
