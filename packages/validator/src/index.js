@@ -13,9 +13,9 @@ export default (app) => {
       const validations = []
       Model.props.map((prop) => {
         if (prop.type === 'text') {
-          validations.push(body[prop.name].isString().withMessage(`${Model.name}.${prop.name} should be string`))
+          validations.push(body([prop.name]).isString().withMessage(`${Model.name}.${prop.name} should be string`))
         } else if (prop.type === 'id') {
-          validations.push(body[prop.name].optional().isString().withMessage(`${Model.name}.${prop.name} should be string UUID`))
+          validations.push(body([prop.name]).optional().isString().withMessage(`${Model.name}.${prop.name} should be string UUID`))
         }
       })
       return validations
