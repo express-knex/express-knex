@@ -1,3 +1,5 @@
+const packageName = 'Crud-actions package'
+
 export const actionList = (app, Model) => {
   return {
     method: 'GET',
@@ -72,19 +74,23 @@ export const actionRemove = (app, Model) => {
 }
 
 export default (app) => {
+  if (!app) {
+    throw Error(`${packageName}: expect app to be initialized`)
+  }
+
   if (!app.validator) {
-    throw Error('Controller package: expect app.validator to be mounter')
+    throw Error(`${packageName}: expect app.validator to be mounted`)
   }
   if (!app.validator.validatorFromModel) {
-    throw Error('Controller package: expect app.validator.validatorFromModel')
+    throw Error(`${packageName}:  expect app.validator.validatorFromModel`)
   }
 
   if (!app.controller) {
-    throw Error('Crud-actions package: expect app.controller to be mounter')
+    throw Error(`${packageName}:  expect app.controller to be mounter`)
   }
   if (!app.controller.list || !app.controller.create || !app.controller.save || !app.controller.remove ||
     !app.controller.removeAll || !app.controller.item) {
-    throw Error('Crud-actions package: expect app.controller to have proper functions on it (list, create, ... etc)!')
+    throw Error(`${packageName}: expect app.controller to have proper functions on it (list, create, ... etc)!`)
   }
 
   const actions = (Model) => {
