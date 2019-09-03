@@ -46,6 +46,7 @@
     "@express-knex/errors": "^0.0.4",
     "@express-knex/storage-sqlite": "^0.1.1",
     "@express-knex/validator": "^0.1.2",
+    "@express-knex/crud-actions": "^0.2.14",
     "babel-eslint": "^10.0.2",
     "babel-plugin-add-module-exports": "^1.0.2",
     "babel-preset-minify": "^0.5.0",

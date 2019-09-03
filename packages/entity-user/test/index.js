@@ -5,6 +5,8 @@ import Storage from '@express-knex/storage-sqlite'
 import Errors from '@express-knex/errors'
 import Validator from '@express-knex/validator'
 import Controller from '@express-knex/controller'
+import CrudActions from '@express-knex/crud-actions'
+
 chai.use(dirtyChai)
 
 describe('Entity-user', () => {
@@ -14,6 +16,7 @@ describe('Entity-user', () => {
     app.validator = Validator(app)
     app.storage = Storage(app)
     app.controller = Controller(app)
+    app.controller.CrudActions = CrudActions(app)
     app.models = {}
     app.models.User = User(app)
     expect(app.controller).to.not.undefined()

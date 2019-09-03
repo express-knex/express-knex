@@ -1,6 +1,7 @@
 import uuid from 'uuid/v4'
 import bcrypt from 'bcrypt'
-// import CrudActions from '@express-knex/crud-actions'
+
+const packageName = 'Entity-user package'
 
 /* User:
   * id: user identifier, UUID
@@ -15,11 +16,15 @@ import bcrypt from 'bcrypt'
 
 export default module.exports = (app) => {
   if (!app.storage) {
-    throw Error('Entity-user package: expect app.storage to be mounted')
+    throw Error(`${packageName}: expect app.storage to be mounted`)
   }
 
   if (!app.storage.processBeforeSaveToStorage || !app.storage.processAfterLoadFromStorage) {
-    throw Error('Entity-user package: expect app.storage to have mounted functions')
+    throw Error(`${packageName}: expect app.storage to have mounted functions`)
+  }
+
+  if (!app.controller || !app.controller.CrudActions) {
+    throw Error(`${packageName}: app.controller.CrudActions should be initialized`)
   }
 
   const Model = {
@@ -97,7 +102,7 @@ export default module.exports = (app) => {
   Model.isPassword = (encodedPassword, password) => bcrypt.compareSync(password, encodedPassword)
 
   // define routes (published methods)
-  // Model.actions = CrudActions(Model)
+  Model.actions = app.controller.CrudActions(Model)
 
   return Model
 }
