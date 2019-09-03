@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/express-knex/express-knex/tree/master/packages/entity-user/compare/@express-knex/entity-user@0.1.7...@express-knex/entity-user@0.2.0) (2019-09-03)
+
+
+### Features
+
+* **entity-user:** use CrudActions ([95a0066](https://github.com/express-knex/express-knex/tree/master/packages/entity-user/commit/95a0066))
+
+
+
+
+
 ## [0.1.7](https://github.com/express-knex/express-knex/tree/master/packages/entity-user/compare/@express-knex/entity-user@0.1.6...@express-knex/entity-user@0.1.7) (2019-09-02)
 
 

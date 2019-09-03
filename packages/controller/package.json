@@ -1,6 +1,6 @@
 {
   "name": "@express-knex/controller",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Express Knex project, Controller",
   "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/controller",
   "main": "lib/index.js",
@@ -39,7 +39,7 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
     "@express-knex/errors": "^0.0.4",
-    "@express-knex/validator": "^0.1.2",
+    "@express-knex/validator": "^0.1.3",
     "babel-eslint": "^10.0.2",
     "babel-plugin-add-module-exports": "^1.0.2",
     "babel-preset-minify": "^0.5.0",
