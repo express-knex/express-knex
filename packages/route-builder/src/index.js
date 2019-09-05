@@ -22,7 +22,7 @@ const getMethod = (methodName, router) => {
   return httpMethod
 }
 
-export default (app, router) => {
+export default (app) => {
   if (!app.errors) {
     throw Error(`${packageName}: expect app.errors to be mounted with proper error classes`)
   }
@@ -43,18 +43,15 @@ export default (app, router) => {
     throw Error(`${packageName}: app.models should exist`)
   }
 
-  if (!router) {
-    if (!app.express) {
-      throw Error(`${packageName}: app.express should exist and provide Express instance`)
-    }
-    router = app.express.Router()
+  if (!app.express) {
+    throw Error(`${packageName}: app.express should exist and provide Express instance`)
   }
 
   if (!app.wrap) {
     throw Error(`${packageName}: app.wrap should exist`)
   }
 
-  const routerForModel = (router, model) => {
+  const routerForModel = (model, router) => {
     if (router && model && model.actions) {
       model.actions.map((action) => {
         const httpMethod = getMethod(action.method, router)
@@ -66,11 +63,15 @@ export default (app, router) => {
   }
 
   const routerForAllModels = (router) => {
+    if (!router) {
+      router = app.express.Router()
+    }
+
     const keys = Object.keys(app.models)
     keys.map((modelName) => {
       const model = app.models[modelName]
       if (model && model.actions) {
-        routerForModel(router, model)
+        routerForModel(model, router)
       }
     })
   }
