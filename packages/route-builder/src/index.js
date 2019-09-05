@@ -54,10 +54,22 @@ export default (app) => {
   const routerForModel = (model) => {
     if (model && model.actions) {
       model.actions.map((action) => {
-        const httpMethod = getMethod(action.method, app)
-        if (httpMethod) {
-          httpMethod.bind(app)
-          httpMethod(action.path, app.wrap(action.handler))
+        switch (action.method) {
+          case 'GET':
+            app.get(action.path, app.wrap(action.handler))
+            break
+          case 'POST':
+            app.post(action.path, app.wrap(action.handler))
+            break
+          case 'PUT':
+            app.put(action.path, app.wrap(action.handler))
+            break
+          case 'DELETE':
+            app.delete(action.path, app.wrap(action.handler))
+            break
+          case 'ALL':
+            app.all(action.path, app.wrap(action.handler))
+            break
         }
       })
     }
