@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/express-knex/express-knex/tree/master/packages/route-builder/compare/@express-knex/route-builder@0.4.1...@express-knex/route-builder@0.4.2) (2019-09-05)
+
+
+### Bug Fixes
+
+* **route-builder:** use app instead router ([305c632](https://github.com/express-knex/express-knex/tree/master/packages/route-builder/commit/305c632))
+
+
+
+
+
 ## [0.4.1](https://github.com/express-knex/express-knex/tree/master/packages/route-builder/compare/@express-knex/route-builder@0.4.0...@express-knex/route-builder@0.4.1) (2019-09-05)
 
 
