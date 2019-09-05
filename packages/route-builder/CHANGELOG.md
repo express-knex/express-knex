@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/express-knex/express-knex/tree/master/packages/route-builder/compare/@express-knex/route-builder@0.4.2...@express-knex/route-builder@0.4.3) (2019-09-05)
+
+
+### Bug Fixes
+
+* **route-builder:** remove getMethod ([905c8a1](https://github.com/express-knex/express-knex/tree/master/packages/route-builder/commit/905c8a1))
+
+
+
+
+
 ## [0.4.2](https://github.com/express-knex/express-knex/tree/master/packages/route-builder/compare/@express-knex/route-builder@0.4.1...@express-knex/route-builder@0.4.2) (2019-09-05)
 
 
