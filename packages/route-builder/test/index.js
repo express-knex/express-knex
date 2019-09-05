@@ -14,7 +14,7 @@ chai.use(dirtyChai)
 
 describe('Route-builder', () => {
   it('Property test', () => {
-    const app = { env: {} }
+    const app = express()
     app.wrap = Wrap(app)
     app.errors = Errors(app)
     app.validator = Validator(app)
