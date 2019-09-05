@@ -1,27 +1,5 @@
 const packageName = 'Route-builder package'
 
-const getMethod = (methodName, router) => {
-  let httpMethod = null
-  switch (methodName) {
-    case 'GET':
-      httpMethod = router.get
-      break
-    case 'POST':
-      httpMethod = router.post
-      break
-    case 'PUT':
-      httpMethod = router.put
-      break
-    case 'DELETE':
-      httpMethod = router.delete
-      break
-    case 'ALL':
-      httpMethod = router.all
-      break
-  }
-  return httpMethod
-}
-
 export default (app) => {
   if (!app.errors) {
     throw Error(`${packageName}: expect app.errors to be mounted with proper error classes`)
