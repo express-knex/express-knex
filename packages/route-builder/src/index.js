@@ -51,10 +51,10 @@ export default (app) => {
     throw Error(`${packageName}: app.wrap should exist`)
   }
 
-  const routerForModel = (model, router) => {
-    if (router && model && model.actions) {
+  const routerForModel = (model) => {
+    if (model && model.actions) {
       model.actions.map((action) => {
-        const httpMethod = getMethod(action.method, router)
+        const httpMethod = getMethod(action.method, app)
         if (httpMethod) {
           httpMethod(action.path, app.wrap(action.handler))
         }
@@ -62,16 +62,16 @@ export default (app) => {
     }
   }
 
-  const routerForAllModels = (router) => {
-    if (!router) {
-      router = app.express.Router()
-    }
+  const routerForAllModels = () => {
+    // if (!router) {
+    //   router = app.express.Router()
+    // }
 
     const keys = Object.keys(app.models)
     keys.map((modelName) => {
       const model = app.models[modelName]
       if (model && model.actions) {
-        routerForModel(model, router)
+        routerForModel(model)
       }
     })
   }
