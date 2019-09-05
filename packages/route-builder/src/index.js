@@ -56,6 +56,7 @@ export default (app) => {
       model.actions.map((action) => {
         const httpMethod = getMethod(action.method, app)
         if (httpMethod) {
+          httpMethod.bind(app)
           httpMethod(action.path, app.wrap(action.handler))
         }
       })
