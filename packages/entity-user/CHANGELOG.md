@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/express-knex/express-knex/tree/master/packages/entity-user/compare/@express-knex/entity-user@0.2.0...@express-knex/entity-user@0.3.0) (2019-09-09)
+
+
+### Features
+
+* **entity-user:** use new storage funcs (storageXX) ([5d06805](https://github.com/express-knex/express-knex/tree/master/packages/entity-user/commit/5d06805))
+
+
+
+
+
 # [0.2.0](https://github.com/express-knex/express-knex/tree/master/packages/entity-user/compare/@express-knex/entity-user@0.1.7...@express-knex/entity-user@0.2.0) (2019-09-03)
 
 

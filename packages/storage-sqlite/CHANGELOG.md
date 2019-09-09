@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/express-knex/express-knex/tree/master/packages/storage-sqlite/compare/@express-knex/storage-sqlite@0.1.1...@express-knex/storage-sqlite@0.2.0) (2019-09-09)
+
+
+### Features
+
+* **storage-sqlite:** use new storage funcs (storageXX) ([e584766](https://github.com/express-knex/express-knex/tree/master/packages/storage-sqlite/commit/e584766))
+
+
+
+
+
 ## [0.1.1](https://github.com/express-knex/express-knex/tree/master/packages/storage-sqlite/compare/@express-knex/storage-sqlite@0.1.0...@express-knex/storage-sqlite@0.1.1) (2019-08-07)
 
 **Note:** Version bump only for package @express-knex/storage-sqlite
