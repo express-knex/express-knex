@@ -49,7 +49,7 @@ export default (app) => {
       }
     },
 
-    initStorage: () => {
+    storageInit: () => {
       // console.log('KNEX driver')
       let debug = false
       if (process.env.NODE_ENV === 'test' || process.env.DEBUG) debug = false
@@ -71,7 +71,7 @@ export default (app) => {
         .catch((err) => { throw err })
     },
 
-    closeStorage: () => {
+    storageClose: () => {
       // console.log('KNEX - close')
       return Promise.resolve()
         .then(() => app.storage.db.migrate.latest())
@@ -80,14 +80,21 @@ export default (app) => {
           app.storage.db = null
         })
     },
-    init: knexStorage.init,
+    storageSchemaInit: knexStorage.storageSchemaInit,
+    storageSchemaClear: knexStorage.storageSchemaClear,
+
+    storageDataInit: knexStorage.storageDataInit,
+    storageDataClear: knexStorage.storageDataClear,
+
+    storageRefsInit: knexStorage.storageRefsInit,
+    storageRefsClear: knexStorage.storageRefsClear,
+
     findById: knexStorage.findById,
     findOne: knexStorage.findOne,
     findAll: knexStorage.findAll,
     count: knexStorage.count,
     removeById: knexStorage.removeById,
     removeAll: knexStorage.removeAll,
-    clearData: knexStorage.clearData,
     create: knexStorage.create,
     update: knexStorage.update
   }
