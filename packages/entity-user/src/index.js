@@ -81,15 +81,14 @@ export default module.exports = (app) => {
   Model.processBeforeSaveToStorage = app.storage.processBeforeSaveToStorage(Model)
   Model.processAfterLoadFromStorage = app.storage.processAfterLoadFromStorage(Model)
 
-  Model.initData = app.storage.init(Model)
-  Model.clearData = app.storage.clearData(Model)
+  Model.storageSchemaInit = app.storage.storageSchemaInit(Model)
+  Model.storageSchemaClear = app.storage.storageSchemaClear(Model)
 
-  // storageSchemaInit: create a persistent scheme in storage to accept model entities
-  // storageSchemaClear: remove schema from storage completely including data
-  // storageDataInit: seed some dataset into storage, if no name - seed system data (if any)
-  // storageDataClear: make storage empty and remove all model's entites from storage
-  // storageRefsInit: add storage reference integrity checks and indexes
-  // storageRefsClear: remove any reference integrity checks and indexes from storage
+  Model.storageDataInit = app.storage.storageDataInit(Model)
+  Model.storageDataClear = app.storage.storageDataClear(Model)
+
+  Model.storageRefsInit = app.storage.storageRefsInit(Model)
+  Model.storageRefsClear = app.storage.storageRefsClear(Model)
 
   Model.findById = app.storage.findById(Model)
   Model.findOne = app.storage.findOne(Model)
