@@ -58,7 +58,7 @@ export default (app) => {
           if (!exists) {
             return knex.schema.createTable(Model.name, (table) => {
               Model.props.map((prop) => {
-                this.mapPropToKnexTable(prop, table)
+                aStorage.mapPropToKnexTable(prop, table)
               })
             })
           }
