@@ -12,9 +12,14 @@ describe('Storage test', () => {
       'processAfterLoadFromStorage',
       'mapPropToKnexTable')
     expect(app).to.include.keys(
-      'initStorage',
-      'closeStorage',
-      'init',
+      'storageInit',
+      'storageClose',
+      'storageSchemaInit',
+      'storageSchemaClear',
+      'storageDataInit',
+      'storageDataClear',
+      'storageRefsInit',
+      'storageRefsClear',
       'findById',
       'findOne',
       'findAll',
