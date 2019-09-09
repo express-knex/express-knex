@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/express-knex/express-knex/tree/master/packages/storage/compare/@express-knex/storage@0.2.0...@express-knex/storage@0.2.1) (2019-09-09)
+
+
+### Bug Fixes
+
+* **storage:** remove use of this ([c3402a5](https://github.com/express-knex/express-knex/tree/master/packages/storage/commit/c3402a5))
+
+
+
+
+
 # [0.2.0](https://github.com/express-knex/express-knex/tree/master/packages/storage/compare/@express-knex/storage@0.1.1...@express-knex/storage@0.2.0) (2019-09-09)
 
 

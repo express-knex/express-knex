@@ -1,6 +1,6 @@
 {
   "name": "@express-knex/storage-sqlite",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Express Knex project, driver for SQLite as a storage",
   "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/storage-sqlite",
   "main": "lib/index.js",
@@ -37,7 +37,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@express-knex/storage": "^0.2.0",
+    "@express-knex/storage": "^0.2.1",
     "knex": "^0.19.1"
   },
   "devDependencies": {
