@@ -1,6 +1,6 @@
 {
   "name": "@express-knex/entity-user",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Express Knex project, User entity",
   "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/entity-user",
   "main": "lib/index.js",
@@ -42,8 +42,8 @@
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
-    "@express-knex/controller": "^0.1.8",
-    "@express-knex/crud-actions": "^0.2.15",
+    "@express-knex/controller": "^0.2.0",
+    "@express-knex/crud-actions": "^0.2.16",
     "@express-knex/errors": "^0.0.4",
     "@express-knex/storage-sqlite": "^0.2.1",
     "@express-knex/validator": "^0.1.3",

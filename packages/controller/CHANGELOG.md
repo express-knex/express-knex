@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/express-knex/express-knex/tree/master/packages/controller/compare/@express-knex/controller@0.1.8...@express-knex/controller@0.2.0) (2019-09-10)
+
+
+### Features
+
+* **controller:** return proper http status code ([3391ae2](https://github.com/express-knex/express-knex/tree/master/packages/controller/commit/3391ae2))
+
+
+
+
+
 ## [0.1.8](https://github.com/express-knex/express-knex/tree/master/packages/controller/compare/@express-knex/controller@0.1.7...@express-knex/controller@0.1.8) (2019-09-03)
 
 **Note:** Version bump only for package @express-knex/controller

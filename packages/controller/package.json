@@ -1,6 +1,6 @@
 {
   "name": "@express-knex/controller",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "description": "Express Knex project, Controller",
   "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/controller",
   "main": "lib/index.js",
