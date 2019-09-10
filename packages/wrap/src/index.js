@@ -8,7 +8,7 @@ export default (app) => (fn) => (req, res, next) => {
   }
   try {
     fn(req, res)
-      .then(() => next())
+      // .then(() => next())
       .catch((err) => { processErr(next, err) })
   } catch (err) { processErr(next, err) }
 }
