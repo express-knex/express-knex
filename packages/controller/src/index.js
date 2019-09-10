@@ -32,7 +32,7 @@ export default (app) => {
           // console.log('res:')
           // console.log(res)
           res.set('Content-Range', `${Model.name} 0-${count}/${count}`)
-          res.json(foundData)
+          res.status(200).json(foundData)
           return foundData
         })
         .catch((error) => {
@@ -53,7 +53,7 @@ export default (app) => {
       return app.validator.applyValidationsToReq(validations, req)
         .then(() => Model.create(req.matchedData))
         .then((item) => {
-          res.json(item)
+          res.status(201).json(item)
           return item
         })
         .catch((error) => {
@@ -73,7 +73,7 @@ export default (app) => {
           if (!foundData) {
             throw app.errors.ServerNotFound(Model.name, req.params.id, `${Model.name} with id ${req.params.id} not found`)
           }
-          res.json(foundData)
+          res.status(200).json(foundData)
           return foundData
         })
         .catch((error) => {
@@ -99,7 +99,7 @@ export default (app) => {
       return app.validator.applyValidationsToReq(validations, req)
         .then(() => Model.update(req.matchedData))
         .then((foundData) => {
-          res.json(foundData)
+          res.status(200).json(foundData)
           return foundData
         })
         .catch((error) => {
@@ -117,7 +117,7 @@ export default (app) => {
       return Model.removeById(req.params.id)
         .then((foundData) => {
           if (foundData) {
-            res.json(foundData)
+            res.status(200).json(foundData)
             return foundData
           }
           throw new app.errors.ServerNotFound(Model.name, req.params.id, `${Model.name} with id ${req.params.id} not found`)
@@ -140,7 +140,7 @@ export default (app) => {
       return Model.removeAll({ whereIn: { column: Model.key, ids: req.qs.ids } })
         .then((foundData) => {
           if (foundData) {
-            res.json(foundData)
+            res.status(200).json(foundData)
             return foundData
           }
           throw new app.errors.ServerError('Not found - ids')
