@@ -102,6 +102,10 @@ export default module.exports = (app) => {
 
   // define routes (published methods)
   Model.actions = app.controller.CrudActions(Model)
+  if (!app.meta) {
+    app.meta = {}
+  }
+  app.meta.actions = app.actions.concat(Model.actions)
 
   return Model
 }
