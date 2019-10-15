@@ -7,6 +7,8 @@ export const actionList = (app, Model) => {
     description: `Get list of "${Model.name}"`,
     path: `/${Model.name.toLowerCase()}`,
     handler: app.controller.list(Model),
+    type: 'Model',
+    object: Model
   }
 }
 
@@ -19,7 +21,9 @@ export const actionCreate = (app, Model) => {
     handler: app.controller.create(Model),
     validate: {
       body: app.validator.validatorFromModel(Model)
-    }
+    },
+    type: 'Model',
+    object: Model
   }
 }
 
@@ -29,7 +33,9 @@ export const actionRemoveAll = (app, Model) => {
     name: `/${Model.name}.removeAll`,
     description: `Delete all "${Model.name}"`,
     path: `/${Model.name.toLowerCase()}`,
-    handler: app.controller.removeAll(Model)
+    handler: app.controller.removeAll(Model),
+    type: 'Model',
+    object: Model
   }
 }
 
@@ -42,7 +48,9 @@ export const actionItem = (app, Model) => {
     handler: app.controller.item(Model),
     validate: {
       params: app.validator.paramId
-    }
+    },
+    type: 'Model',
+    object: Model
   }
 }
 
@@ -56,7 +64,9 @@ export const actionSave = (app, Model) => {
     validate: {
       params: app.validator.paramId,
       body: app.validator.validatorFromModel(Model)
-    }
+    },
+    type: 'Model',
+    object: Model
   }
 }
 
@@ -69,7 +79,9 @@ export const actionRemove = (app, Model) => {
     handler: app.controller.remove(Model),
     validate: {
       params: app.validator.paramId
-    }
+    },
+    type: 'Model',
+    object: Model
   }
 }
 
