@@ -1,6 +1,6 @@
 import chai, { expect } from 'chai'
 import dirtyChai from 'dirty-chai'
-import User from '../src'
+import Auth from '../src'
 import Storage from '@express-knex/storage-sqlite'
 import Errors from '@express-knex/errors'
 import Validator from '@express-knex/validator'

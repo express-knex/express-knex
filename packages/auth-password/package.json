@@ -2,7 +2,7 @@
   "name": "@express-knex/auth-password",
   "version": "0.0.1",
   "description": "Express Knex project, Auth-password",
-  "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/entity-user",
+  "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/auth-password",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib",
@@ -28,7 +28,8 @@
   "keywords": [
     "Express",
     "Knex",
-    "controller"
+    "auth",
+    "password"
   ],
   "author": "deksden",
   "license": "MIT",
