@@ -28,7 +28,8 @@
   "keywords": [
     "Express",
     "Knex",
-    "controller"
+    "entity",
+    "User"
   ],
   "author": "deksden",
   "license": "MIT",
