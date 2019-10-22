@@ -3,26 +3,34 @@ import jwt from 'jwt-simple'
 const packageName = 'Auth-password package'
 
 export default module.exports = (app) => {
-  if (!app.models.User) {
-    throw Error(`${packageName}: can not find model "User"`)
-  }
+  // define dependencies:
+  app.meta.modules.push({
+    module: packageName,
+    dependency: 'models.User'
+  })
 
-  if (!app.models.Session) {
-    throw Error(`${packageName}: can not find model "Session"`)
-  }
-  if (!app.errors) {
-    throw Error(`${packageName}: expect app.errors to be mounted with proper error classes`)
-  }
-  if (!app.errors.ServerInvalidUsernamePassword || !app.errors.ServerNotAllowed ||
-    !app.errors.ServerGenericError) {
-    throw Error(`${packageName}: can not find expected error classes at app.errors`)
-  }
+  app.meta.modules.push({
+    module: packageName,
+    dependency: 'models.Session'
+  })
 
-  const User = app.models.User
-  const Errors = app.errors
-  const Session = app.models.Session
+  app.meta.modules.push({
+    module: packageName,
+    dependency: [
+      'errors', 'errors.ServerInvalidUsernamePassword',
+      'app.errors.ServerNotAllowed', 'app.errors.ServerGenericError'
+    ]
+  })
+
+  app.meta.modules.push({
+    module: packageName,
+    dependency: 'auth.getTokenFromSession'
+  })
 
   const login = (req, res) => {
+    const User = req.app.models.User
+    const Errors = req.app.errors
+    const Session = req.app.models.Session
     return User.findOne({ where: { email: req.body.username } })
       .then((user) => {
         if (!user) {
@@ -44,10 +52,10 @@ export default module.exports = (app) => {
         return Session.createOrUpdate({ userId: user.id, ip: req.ip })
       })
       .then((session) => {
-        res.json({ token: jwt.encode({ id: session.id }, app.env.JWT_SECRET ? app.env.JWT_SECRET : 'jhwckjeqfjnqwdoijed') })
+        res.json({ token: req.app.auth.getTokenFromSession(session.id) })
 
-        if (app.models.UserGroup) {
-          return app.models.UserGroup.addUser(app.models.UserGroup.systemGroupLoggedIn(), session.userId)
+        if (req.app.models.UserGroup) {
+          return req.app.models.UserGroup.addUser(req.app.models.UserGroup.systemGroupLoggedIn(), session.userId)
         }
       })
       .catch((error) => {
@@ -64,7 +72,7 @@ export default module.exports = (app) => {
   const actions = [
     {
       method: 'POST',
-      name: `Auth.Password.login`,
+      name: `Auth.Password.Login`,
       description: `Login via username/password`,
       path: `/auth/login`,
       handler: login,
@@ -76,4 +84,9 @@ export default module.exports = (app) => {
       object: 'Password'
     }
   ]
+
+  if (!app.meta) {
+    app.meta = {}
+  }
+  app.meta.actions = app.actions.concat(actions)
 }
