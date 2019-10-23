@@ -4,6 +4,17 @@ const packageName = 'Session-jwt'
 const DEF_SECRET = 'jhwckjeqfjnqwdoijed'
 
 export default module.exports = (app) => {
+  // guard empty app object
+  if (!app.meta) {
+    app.meta = {}
+  }
+  if (!app.meta.modules) {
+    app.meta.modules = []
+  }
+  if (!app.meta.actions) {
+    app.meta.actions = []
+  }
+
   // define deps:
   app.meta.modules.push({
     module: packageName,
