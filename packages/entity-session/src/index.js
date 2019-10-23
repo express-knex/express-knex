@@ -1,5 +1,5 @@
 import uuid from 'uuid/v4'
-import bcrypt from 'bcrypt'
+import _ from 'lodash'
 
 const packageName = 'Entity-session package'
 
