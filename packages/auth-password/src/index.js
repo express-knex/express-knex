@@ -1,6 +1,17 @@
 const packageName = 'Auth-password package'
 
 export default module.exports = (app) => {
+  // guard empty app object
+  if (!app.meta) {
+    app.meta = {}
+  }
+  if (!app.meta.modules) {
+    app.meta.modules = []
+  }
+  if (!app.meta.actions) {
+    app.meta.actions = []
+  }
+
   // define dependencies:
   app.meta.modules.push({
     module: packageName,
@@ -86,6 +97,6 @@ export default module.exports = (app) => {
   if (!app.meta) {
     app.meta = {}
   }
-  app.meta.actions = app.actions.concat(actions)
+  app.meta.actions = app.meta.actions.concat(actions)
   return app
 }
