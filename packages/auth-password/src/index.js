@@ -1,5 +1,3 @@
-import jwt from 'jwt-simple'
-
 const packageName = 'Auth-password package'
 
 export default module.exports = (app) => {
@@ -89,4 +87,5 @@ export default module.exports = (app) => {
     app.meta = {}
   }
   app.meta.actions = app.actions.concat(actions)
+  return app
 }
