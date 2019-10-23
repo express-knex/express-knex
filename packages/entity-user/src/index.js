@@ -15,17 +15,35 @@ const packageName = 'Entity-user package'
 */
 
 export default module.exports = (app) => {
-  if (!app.storage) {
-    throw Error(`${packageName}: expect app.storage to be mounted`)
+  // guard empty app object
+  if (!app.meta) {
+    app.meta = {}
+  }
+  if (!app.meta.modules) {
+    app.meta.modules = []
+  }
+  if (!app.meta.actions) {
+    app.meta.actions = []
   }
 
-  if (!app.storage.processBeforeSaveToStorage || !app.storage.processAfterLoadFromStorage) {
-    throw Error(`${packageName}: expect app.storage to have mounted functions`)
-  }
+  // define dependencies:
+  app.meta.modules.push({
+    module: packageName,
+    dependency: ['storage', 'storage.processBeforeSaveToStorage', 'storage.processAfterLoadFromStorage']
+  })
 
-  if (!app.controller || !app.controller.CrudActions) {
-    throw Error(`${packageName}: app.controller.CrudActions should be initialized`)
-  }
+  app.meta.modules.push({
+    module: packageName,
+    dependency: 'controller.CrudActions'
+  })
+
+  app.meta.modules.push({
+    module: packageName,
+    dependency: [
+      'errors', 'errors.ServerInvalidUsernamePassword',
+      'app.errors.ServerNotAllowed', 'app.errors.ServerGenericError'
+    ]
+  })
 
   const Model = {
     name: 'User',
@@ -105,7 +123,7 @@ export default module.exports = (app) => {
   if (!app.meta) {
     app.meta = {}
   }
-  app.meta.actions = app.actions.concat(Model.actions)
+  app.meta.actions = app.meta.actions.concat(Model.actions)
 
   return Model
 }
