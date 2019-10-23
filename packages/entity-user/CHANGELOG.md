@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/express-knex/express-knex/tree/master/packages/entity-user/compare/@express-knex/entity-user@0.3.2...@express-knex/entity-user@0.4.0) (2019-10-23)
+
+
+### Features
+
+* **entity-user:** add actions to app meta ([83a7d55](https://github.com/express-knex/express-knex/tree/master/packages/entity-user/commit/83a7d55))
+* **entity-user:** use deps ([ef50988](https://github.com/express-knex/express-knex/tree/master/packages/entity-user/commit/ef50988))
+
+
+
+
+
 ## [0.3.2](https://github.com/express-knex/express-knex/tree/master/packages/entity-user/compare/@express-knex/entity-user@0.3.1...@express-knex/entity-user@0.3.2) (2019-09-10)
 
 **Note:** Version bump only for package @express-knex/entity-user

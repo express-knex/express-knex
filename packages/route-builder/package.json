@@ -1,6 +1,6 @@
 {
   "name": "@express-knex/route-builder",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "description": "Express Knex project, route-builder",
   "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/route-builder",
   "main": "lib/index.js",
@@ -40,8 +40,8 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
     "@express-knex/controller": "^0.2.0",
-    "@express-knex/crud-actions": "^0.2.16",
-    "@express-knex/entity-user": "^0.3.2",
+    "@express-knex/crud-actions": "^0.3.0",
+    "@express-knex/entity-user": "^0.4.0",
     "@express-knex/errors": "^0.0.4",
     "@express-knex/storage-sqlite": "^0.2.1",
     "@express-knex/validator": "^0.1.3",

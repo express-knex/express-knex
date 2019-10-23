@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/express-knex/express-knex/tree/master/packages/crud-actions/compare/@express-knex/crud-actions@0.2.16...@express-knex/crud-actions@0.3.0) (2019-10-23)
+
+
+### Features
+
+* **crud-actions:** add action type ([7e35af6](https://github.com/express-knex/express-knex/tree/master/packages/crud-actions/commit/7e35af6))
+
+
+
+
+
 ## [0.2.16](https://github.com/express-knex/express-knex/tree/master/packages/crud-actions/compare/@express-knex/crud-actions@0.2.15...@express-knex/crud-actions@0.2.16) (2019-09-10)
 
 **Note:** Version bump only for package @express-knex/crud-actions

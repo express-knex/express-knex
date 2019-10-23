@@ -1,6 +1,6 @@
 {
   "name": "@express-knex/auth-password",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Express Knex project, Auth-password",
   "homepage": "https://github.com/express-knex/express-knex/tree/master/packages/auth-password",
   "main": "lib/index.js",
@@ -33,8 +33,6 @@
   ],
   "author": "deksden",
   "license": "MIT",
-  "dependencies": {
-  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
@@ -42,7 +40,7 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
     "@express-knex/controller": "^0.2.0",
-    "@express-knex/crud-actions": "^0.2.16",
+    "@express-knex/crud-actions": "^0.3.0",
     "@express-knex/errors": "^0.0.4",
     "@express-knex/storage-sqlite": "^0.2.1",
     "@express-knex/validator": "^0.1.3",
