@@ -22,11 +22,11 @@ export default module.exports = (app) => {
   // define methods on app.auth path:
   // encode sessionID into JWT:
   const encode = (sessionId) =>
-    jwt.sign({ id: sessionId }, app.env.JWT_SECRET ? app.env.JWT_SECRET : DEF_SECRET, { expiresIn: '1h' } )
+    jwt.sign({ id: sessionId }, app.env.JWT_SECRET ? app.env.JWT_SECRET : DEF_SECRET, { expiresIn: '1h' })
 
   // parse req header and extract schema/token
   const getTokenFromReq = (req) => {
-    const pattern = /(\S+)\s+(\S+)/;
+    const pattern = /(\S+)\s+(\S+)/
     const headerValue = req.get('authorization')
     if (typeof headerValue !== 'string') {
       return null
