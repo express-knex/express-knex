@@ -1,4 +1,5 @@
 import jwt from 'jsonwebtoken'
+import Session from '@express-knex/entity-session'
 
 const packageName = 'Session-jwt'
 const DEF_SECRET = 'jhwckjeqfjnqwdoijed'
@@ -30,6 +31,10 @@ export default module.exports = (app) => {
     dependency: ['errors', 'errors.ServerNotAllowed']
   })
 
+  // install Session object if needed:
+  if (!app.models.Session) {
+    app.models.Session = Session(app)
+  }
   // define methods on app.auth path:
   // encode sessionID into JWT:
   const encode = (sessionId) =>
