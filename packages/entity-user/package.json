@@ -34,7 +34,7 @@
   "author": "deksden",
   "license": "MIT",
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
